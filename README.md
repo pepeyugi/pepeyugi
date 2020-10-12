@@ -1,5 +1,7 @@
 ### Hi there 👋
 
+### Initial Website is being worked on with countdown sequence for the first collection.
+
 <!--
 **pepeyugi/pepeyugi** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
