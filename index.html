@@ -53,7 +53,8 @@
             <div class="intro">
               <div class="intro--banner">
                 <h1>Rarest<br>NFTs<br>Ever!</h1>
-                <a href="https://app.rarible.com/pepeyugi/collectibles" target="_blank">VIEW COLLECTION</a>
+                <br><br><a href="https://app.rarible.com/pepeyugi/collectibles" target="_blank">VIEW COLLECTION</a>
+                <br><br><a href="https://info.uniswap.org/pair/0x992c97e177253aedbd54829979c0be9fa57c55f1" target="_blank">Buy $YUGI on Uniswap</a>
                 <img src="assets/img/main.png" alt="Welcome">
               </div>
               <div class="intro--options">
@@ -275,7 +276,7 @@
                        </header>
                      
                        <div class="w3-container">
-                        <p style="color:black">Countdown coming soon!</p>
+                        <h3 id="countdown" style="color:black"></h3>
                        </div>
                        <div class="w3-container w3-light-grey w3-padding">
                         <button class="w3-button w3-right w3-white w3-border" 
@@ -315,5 +316,35 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
 <script src="assets/js/functions-min.js"></script>
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Oct 14, 2020 22:00:00").getUTCTime();
+  
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+  
+    // Get today's date and time
+    var now = new Date().getUTCDate();
+  
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+  
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+    // Display the result in the element with id="countdown"
+    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+  
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "Founder's Airdrop Completed";
+    }
+  }, 1000);
+  </script>
 </body>
 </html>
